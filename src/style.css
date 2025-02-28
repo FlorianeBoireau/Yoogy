@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+    display: grid;
+    grid-template-areas:
+        "head"
+        "main"
+        "foot";
+    grid-template-columns: 1fr; 
+    grid-template-rows: 30vh 50vh 20vh;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Inter Tight";
+}
+
+body > header {
+    grid-area: head;
+}
+
+body > main {
+    grid-area: main;
+    background-color: #C0CC9B;
+}
+
+body > footer {
+    grid-area: foot;
+    background-color: black;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color: #C0CC9B;
+}
+
+.logo {
+    width: 15%;
+    padding: 10px;
+}
+
+.container {
+    padding: 10px;
+    background-color: white;
+    border-radius: 30px;
+    margin: 10%;
+}
+
+.photos {
+    display: flex;
+    margin: auto;
+    width: 30%;    
+}
+
+
+@media screen and (min-width: 768px) {
+    body {
+        grid-template-areas:
+            "head head"
+            "main main"
+            "foot foot";
+        grid-template-rows: 2fr 3fr 1fr;
+    }
+}
